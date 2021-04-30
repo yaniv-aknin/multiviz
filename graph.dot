@@ -1,0 +1,41 @@
+digraph {
+    node [ fontname="Tahoma", fontcolor="#073763ff", fillcolor="white", style="filled" ];
+    graph [ fontname="Tahoma", style="dashed,filled", fontcolor="#f16c05ff", fillcolor="#f8f9faff", fontsize="16" ];
+    edge [ fontname="Tahoma", fontcolor="#5f6368ff", fontsize="12" ];
+
+    /*#start Glyphs */
+    A->Letter;
+    B->Letter;
+    C->Letter;
+    D->Letter;
+    E->Letter;
+    0->Digit;
+    1->Digit;
+    2->Digit;
+    3->Digit;
+    4->Digit;
+    subgraph cluster_glyphs {
+      label="Glyphs";
+      A;B;C;D;E;0;1;2;3;4;Letter;Digit
+    }
+    /* stop#*/
+
+    /*#start Maths */
+    Addition->Digit;
+    Subtraction->Digit;
+    Multiplication->Digit;
+    subgraph cluster_maths {
+      label="Maths";
+      Addition;Subtraction;Multiplication
+    }
+    /* stop#*/
+
+    /*#start Verbiage */
+    Word->Letter;
+    Acronym->Letter;
+    subgraph cluster_verbiage {
+      label="Verbiage";
+      Word;Acronym
+    }
+    /* stop#*/
+}
